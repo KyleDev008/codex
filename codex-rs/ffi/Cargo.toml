@@ -1,0 +1,41 @@
+[package]
+edition.workspace = true
+license.workspace = true
+name = "codex-ffi"
+version.workspace = true
+
+[lib]
+crate-type = ["cdylib", "staticlib", "rlib"]
+doctest = false
+name = "codex_ffi"
+path = "src/lib.rs"
+test = false
+
+[lints]
+workspace = true
+
+[dependencies]
+codex-app-server = { workspace = true }
+codex-app-server-client = { workspace = true }
+codex-app-server-protocol = { workspace = true }
+codex-arg0 = { workspace = true }
+codex-config = { workspace = true }
+codex-core = { workspace = true }
+codex-exec-server = { workspace = true }
+codex-feedback = { workspace = true }
+codex-protocol = { workspace = true }
+codex-utils-absolute-path = { workspace = true }
+codex-utils-home-dir = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true, features = [
+    "rt-multi-thread",
+    "sync",
+    "time",
+    "macros",
+] }
+tracing = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }

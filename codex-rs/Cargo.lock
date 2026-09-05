@@ -3199,6 +3199,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "codex-ffi"
+version = "0.0.0"
+dependencies = [
+ "codex-app-server",
+ "codex-app-server-client",
+ "codex-app-server-protocol",
+ "codex-arg0",
+ "codex-config",
+ "codex-core",
+ "codex-exec-server",
+ "codex-feedback",
+ "codex-protocol",
+ "codex-utils-absolute-path",
+ "codex-utils-home-dir",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "tokio",
+ "tracing",
+]
+
+[[package]]
 name = "codex-file-search"
 version = "0.0.0"
 dependencies = [
